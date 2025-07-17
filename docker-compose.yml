@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  vakif-dashboard:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./vakif.db:/app/db/vakif.db
+      - uploads:/app/uploads
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    restart: unless-stopped
+
+volumes:
+  uploads: 
