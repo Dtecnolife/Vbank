@@ -17,7 +17,7 @@ let db: Database.Database | null = null;
 
 export function getDatabase(): Database.Database {
   if (!db) {
-    const dbPath = join(process.cwd(), 'vakif.db');
+    const dbPath = join(process.cwd(), 'db', 'vakif.db');
     db = new Database(dbPath);
     
     // Enable WAL mode for better concurrent access

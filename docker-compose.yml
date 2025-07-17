@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./vakif.db:/app/db/vakif.db
+      - ./db:/app/db
       - uploads:/app/uploads
     environment:
       - NODE_ENV=production
